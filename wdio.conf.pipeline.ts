@@ -59,16 +59,14 @@ export const config: Options.Testrunner = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [
-        {
-            browserName: "chrome",
-        },
-        // Add more browser capabilities as needed.
-    ],
-    path: '/wd/hub',
-    hostname: 'localhost', // Selenoid is running on the same machine as GitHub Actions.
-    port: 4444,
-
+    capabilities: [{
+        maxInstances: 5,
+        browserName: 'chrome',
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': { 
+            args: ["--headless", "user-agent=...","--disable-gpu","--window-size=1440,735"]
+       }
+    }],
     //
     // ===================
     // Test Configurations

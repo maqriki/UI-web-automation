@@ -11,6 +11,6 @@
   },
   "scripts": {
     "test": "wdio run ./wdio.conf.ts",
-    "test:pipeline": "wdio run ./wdio.conf.pipeline.ts"
+    "test:pipeline": "npx wdio run ./wdio.conf.pipeline.ts"
   }
 }
