@@ -13,11 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Start selenoid
-        uses: Xotabu4/selenoid-github-action@v2
-      - uses: actions/checkout@v1
-      - run: npm ci  
-
       - name: Checkout Code
         uses: actions/checkout@v2
 
@@ -29,9 +24,18 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Start Selenoid
+        run: |
+          docker run -d --name selenoid -p 4444:4444 \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          aerokube/selenoid:latest-release
+          docker run -d --name selenoid-ui -p 8080:8080 \
+          --link selenoid:selenoid \
+          aerokube/selenoid-ui:latest-release
+
       - name: Run WDIO Tests
         run: npm run test:pipeline
 
       - name: Stop Selenoid
-        run: docker stop selenoid
+        run: docker stop selenoid selenoid-ui
 
