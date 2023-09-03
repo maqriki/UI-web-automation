@@ -35,7 +35,7 @@ jobs:
         run: npm install
 
       - name: Run WDIO Tests
-        run: npm run test:pipeline
+        run: npm run test
 
       - name: Stop Selenoid
         run: docker stop selenoid
