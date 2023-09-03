@@ -61,11 +61,7 @@ export const config: Options.Testrunner = {
     //
     capabilities: [
         {
-            browserName: 'chrome',
-            'selenoid:options': {
-                enableVNC: true,
-                enableVideo: false,
-            },
+            browserName: "chrome",
         },
         // Add more browser capabilities as needed.
     ],
