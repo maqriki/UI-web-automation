@@ -43,4 +43,4 @@ Install dependencies
 ```
 ### To access report from pipeline visit this url
 
-[link]https://maqriki.github.io/UI-web-automation
+https://maqriki.github.io/UI-web-automation (use incognito mode)
