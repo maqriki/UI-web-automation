@@ -30,8 +30,14 @@ Install dependencies
 
 ## Running Tests
 
-### To run tests with html report, run the following command
+### To run tests from local
 
 ```bash
   npm run test
+```
+
+### To run tests report from local
+
+```bash
+  npm run allure-report
 ```
