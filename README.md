@@ -41,3 +41,6 @@ Install dependencies
 ```bash
   npm run allure-report
 ```
+### To access report from pipeline visit this url
+
+[link]https://maqriki.github.io/UI-web-automation
