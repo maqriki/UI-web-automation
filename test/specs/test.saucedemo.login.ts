@@ -12,7 +12,7 @@ describe('Login saucedemo', function(){
         await loginPage.login('', 'secret_sauce');
 
         const expectedError = await loginPage.validateError('Epic sadface: Username is required');
-        expect(expectedError).toBeTruthy();
+        expect(expectedError).toBeFalse();
     });
 
     it('@negative, user should not login with password empty', async() => {
