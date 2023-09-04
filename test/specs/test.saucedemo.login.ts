@@ -12,7 +12,7 @@ describe('Login saucedemo', function(){
         await loginPage.login('', 'secret_sauce');
 
         const expectedError = await loginPage.validateError('Epic sadface: Username is required');
-        expect(expectedError).toBeFalse();
+        expect(expectedError).toBeTrue();
     });
 
     it('@negative, user should not login with password empty', async() => {
@@ -20,7 +20,7 @@ describe('Login saucedemo', function(){
         await loginPage.login('standard_user', '');
 
         const expectedError = await loginPage.validateError('Epic sadface: Password is required');
-        expect(expectedError).toBeTruthy();
+        expect(expectedError).toBeTrue();
     });
 
     it('@negative, user should not login with wrong username or password', async() => {
@@ -28,7 +28,7 @@ describe('Login saucedemo', function(){
         await loginPage.login('standard_user', 'wrong_password');
 
         const expectedError = await loginPage.validateError('Epic sadface: Username and password do not match any user in this service');
-        expect(expectedError).toBeTruthy();
+        expect(expectedError).toBeTrue();
     });
 
     it('@negative, user should not login with locked out user', async() => {
@@ -36,6 +36,6 @@ describe('Login saucedemo', function(){
         await loginPage.login('locked_out_user', 'secret_sauce');
 
         const expectedError = await loginPage.validateError('Epic sadface: Sorry, this user has been locked out.');
-        expect(expectedError).toBeTruthy();
+        expect(expectedError).toBeTrue();
     });
 });
