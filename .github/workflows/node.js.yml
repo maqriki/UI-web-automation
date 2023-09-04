@@ -29,6 +29,9 @@ jobs:
 
       - name: Run WDIO Tests
         run: npm run test:pipeline
+      
+      - name: Checking folder
+        run: cd allure-results && ls
 
       - name: Get allure history
         uses: actions/checkout@v2
