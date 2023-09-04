@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Sep 03 16:27:04 GMT 2023","Sun Sep 03 16:27:05 GMT 2023","1077","","Login saucedemo","","","","@negative, user should not login with username empty",""
+"passed","Sun Sep 03 16:27:07 GMT 2023","Sun Sep 03 16:27:08 GMT 2023","711","","Login saucedemo","","","","@negative, user should not login with locked out user",""
+"passed","Sun Sep 03 16:27:06 GMT 2023","Sun Sep 03 16:27:07 GMT 2023","731","","Login saucedemo","","","","@negative, user should not login with wrong username or password",""
+"passed","Sun Sep 03 16:27:05 GMT 2023","Sun Sep 03 16:27:06 GMT 2023","791","","Login saucedemo","","","","@negative, user should not login with password empty",""
+"passed","Sun Sep 03 16:27:02 GMT 2023","Sun Sep 03 16:27:04 GMT 2023","2695","","Login saucedemo","","","","@positive, user should successfully login with valid username and password",""
